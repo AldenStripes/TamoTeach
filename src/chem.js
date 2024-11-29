@@ -2,13 +2,13 @@ import React from "react";
 import "./Home.css";
 import "./Learn.css";
 
-function chem() {
+function Chemistry() {
   return (
     <div className="Learn">
       <header className="LearnHeader">
-        <h1>Learn</h1>
+        <h1>Chemistry</h1>
       </header>
-      <p>Today I want to learn...</p>
+      <h1>Unit 1</h1>
 
       <img
         src={require(`./images/Chemistry.PNG`)}
@@ -42,4 +42,4 @@ function chem() {
   );
 }
 
-export default chem;
+export default Chemistry;

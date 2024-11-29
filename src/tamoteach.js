@@ -10,12 +10,13 @@ function Learn() {
       <header className="LearnHeader">
         <h1>Learn</h1>
       </header>
-      <p>Today I want to learn...</p>
+      <h1>Today I want to learn...</h1>
 
       <img
         src={require(`./images/Chemistry.PNG`)}
         alt="Chemistry"
         className="whiteboard"
+        onClick={() => navigate("/chem")}
       ></img>
 
       {/* RIGHT ARROW */}
@@ -23,7 +24,6 @@ function Learn() {
         src={require(`./images/Arrow.PNG`)}
         alt="Arrow"
         className="right_arrow"
-        id="right arrow"
       ></img>
 
       {/* LEFT ARROW */}
@@ -31,7 +31,6 @@ function Learn() {
         src={require(`./images/Arrow.PNG`)}
         alt="Arrow"
         className="left_arrow"
-        id="left arrow"
       ></img>
 
       <button
@@ -40,6 +39,13 @@ function Learn() {
       >
         Back to Home
       </button>
+
+      <img
+        src={require(`./images/Tophat .GIF`)}
+        alt="Toppy"
+        className="Toppy"
+      ></img>
+
       <footer className="button-grid-container">
         <button onClick={() => navigate("/battle")}>Battle</button>
         <button onClick={() => navigate("/pull")}>Pull</button>

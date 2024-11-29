@@ -8,6 +8,7 @@ import Train from "./Train";
 import Pull from "./Pull";
 import Settings from "./Settings";
 import Learn from "./tamoteach";
+import Chemistry from "./chem";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/pull" element={<Pull />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/learn" element={<Learn />} />
+        <Route path="/chem" element={<Chemistry />} />
       </Routes>
     </Router>
   );
