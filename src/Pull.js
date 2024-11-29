@@ -33,6 +33,7 @@ function Pull() {
       savedPets.push(pet);
       localStorage.setItem('selectedPets', JSON.stringify(savedPets));
     }
+    
   };
 
   return (
@@ -55,6 +56,7 @@ function Pull() {
         <button className="pull-button" onClick={() => {
           openModal();
           decreasePoints(20);
+          addPet({ id: 3, name: "Pengu", rarity: "Rare", img: "images/penguin.gif" });
         }}>Pull</button>
       </div>
 
