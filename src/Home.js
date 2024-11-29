@@ -8,26 +8,26 @@ function Home() {
 
   const pets = [
     { id: 1, name: 'Jeff', rarity: 'Common', img: 'images/chippy.gif' },
-    { id: 2, name: 'Jag', rarity: 'Mythic', img: 'images/fraser-jaguar.gif' },
+    { id: 2, name: 'Jaguar dude', rarity: 'Mythic', img: 'images/fraser-jaguar.gif' },
     { id: 3, name: 'Remy', rarity: 'Common', img: 'images/chipster.gif' },
   ];
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="Home">
+      <header className="Home-header">
         <div className="points">
           <h1>Points: {points}</h1>
         </div>
       </header>
-      <main className="App-body">
-        <h2>My Pets</h2>
+      <main className="Home-body">
+        <h2>Pet Home Page Thingy</h2>
         <div className="pets-container">
           {pets.map((pet) => (
             <div
               key={pet.id}
               className={`pet-card ${pet.rarity.toLowerCase()}`}
-              onClick={() => navigate(`/pet/${pet.id}`)}  // Navigate to the pet's detail page
-              style={{ cursor: 'pointer' }}  // Add cursor pointer for better UX
+              onClick={() => navigate(`/pet/${pet.id}`)}  // Navigate to pet's detail page
+              style={{ cursor: 'pointer' }}  // Add cursor pointer for better UI
             >
               <span className="pet-img">
                 <img
