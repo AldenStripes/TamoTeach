@@ -1,22 +1,33 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Home.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./Home.css";
 
 function Home() {
   const [points, setPoints] = useState(100);
   const navigate = useNavigate(); // Hook to navigate between pages
 
   const pets = [
-    { id: 1, name: 'Jeff', rarity: 'Common', img: 'images/chippy.gif' },
-    { id: 2, name: 'Jag', rarity: 'Mythic', img: 'images/fraser-jaguar.gif' },
-    { id: 3, name: 'Pengu', rarity: 'Rare', img: 'images/penguin.gif' },
+    { id: 1, name: "Jeff", rarity: "Common", img: "images/chippy.gif" },
+    { id: 2, name: "Jag", rarity: "Mythic", img: "images/fraser-jaguar.gif" },
+    { id: 3, name: "Pengu", rarity: "Rare", img: "images/penguin.gif" },
   ];
 
   return (
     <div className="Home">
       <header className="header">
+        <button className="back-button" onClick={() => window.history.back()}>
+          <img
+            className="back-button-img"
+            src={require(`./images/left-arrow.PNG`)}
+          />
+        </button>
+        <div className="middle">
+          {" "}
+          <h1>Home</h1>
+        </div>
         <div className="points">
-          <h1><img src={require=('./images/points.webp')}/>{points}</h1>
+          <img className="points-img" src={require("./images/points.webp")} />
+          <p className="points-text">{points}</p>
         </div>
       </header>
       <main className="Home-body">
@@ -41,9 +52,11 @@ function Home() {
           ))}
         </div>
       </main>
+
       <footer className="button-grid-container">
         <button onClick={() => navigate("/battle")}>Battle</button>
         <button onClick={() => navigate("/pull")}>Pull</button>
+        <button onClick={() => navigate("/home")}>Home</button>
         <button onClick={() => navigate("/learn")}>Learn</button>
         <button onClick={() => navigate("/shop")}>Shop</button>
       </footer>

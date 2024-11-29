@@ -57,8 +57,9 @@ function Learn() {
       <footer className="button-grid-container">
         <button onClick={() => navigate("/battle")}>Battle</button>
         <button onClick={() => navigate("/pull")}>Pull</button>
-        <button onClick={() => navigate("/learn")}>Review</button>
-        <button onClick={() => navigate("/settings")}>Settings</button>
+        <button onClick={() => navigate("/home")}>Home</button>
+        <button onClick={() => navigate("/learn")}>Learn</button>
+        <button onClick={() => navigate("/shop")}>Shop</button>
       </footer>
     </div>
   );

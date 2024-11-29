@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import "./Chem.css";
 import w1 from "./images/Unit 1.PNG";
@@ -14,6 +15,7 @@ function Chemistry() {
   const units = ["Unit 1", "Unit 2", "Unit 3"];
   const [currentUnit, setCurrentUnit] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate(); // Hook to navigate between pages
 
   const cycle_up = () => {
     setCurrentUnit((prevUnit) => (prevUnit + 1) % 3);
@@ -75,6 +77,14 @@ function Chemistry() {
         id="left arrow2"
         onClick={cycle_down}
       ></img>
+
+      <footer className="button-grid-container">
+        <button onClick={() => navigate("/battle")}>Battle</button>
+        <button onClick={() => navigate("/pull")}>Pull</button>
+        <button onClick={() => navigate("/home")}>Home</button>
+        <button onClick={() => navigate("/learn")}>Learn</button>
+        <button onClick={() => navigate("/shop")}>Shop</button>
+      </footer>
     </div>
   );
 }

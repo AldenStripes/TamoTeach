@@ -19,10 +19,10 @@ h3 {
 
 .whiteboard {
   z-index: 1;
-  top: 10vh;
+  top: 5vh;
   left: 50vw;
   transform: translate(-50%);
-  display: flex;
+  display: block;
   width: 50vw;
   height: auto;
   position: absolute;
@@ -73,5 +73,5 @@ footer {
   display: block;
   width: 100vw;
   position: absolute;
-  bottom: -0vh;
+  bottom: -10vh;
 }

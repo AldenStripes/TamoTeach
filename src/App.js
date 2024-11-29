@@ -22,6 +22,7 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/learn" element={<Learn />} />
         <Route path="/chem" element={<Chemistry />} />
+        <Route path="/Home" element={<Home />} />
       </Routes>
     </Router>
   );
