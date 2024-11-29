@@ -30,7 +30,7 @@ function Learn() {
       <img
         src={require(`./images/Chemistry.PNG`)}
         alt="Chemistry"
-        className="whiteboard"
+        className="whiteBoard"
         onClick={() => navigate("/chem")}
       ></img>
 
