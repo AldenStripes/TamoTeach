@@ -21,7 +21,7 @@ function Battle() {
         </div>
       </header>
       <div className="battle-background-container">
-        <img className="battle-img" src={require('./images/battle.PNG')}/>
+        <img className="battle-img" src={require('./images/battle.GIF')}/>
         <button className='attack-button' onClick={openModal}></button>
         <button className='defense-button' onClick={openModal}></button>
       </div>

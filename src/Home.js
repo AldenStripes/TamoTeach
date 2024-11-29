@@ -14,9 +14,16 @@ function Home() {
 
   return (
     <div className="Home">
-      <header className="header">
-        <div className="points">
-          <h1><img src={require=('./images/points.webp')}/>{points}</h1>
+      <header classname="header">
+        <button classname='back-button' onclick={() => window.history.back()}>
+          <img classname='back-button-img' src={require(`./images/left-arrow.PNG`)}/>
+        </button>
+        <div classname="middle">
+
+        </div>
+        <div classname="points">
+          <img classname="points-img" src={require('./images/points.webp')}/>
+          <p classname='points-text'>{points}</p>
         </div>
       </header>
       <main className="Home-body">
