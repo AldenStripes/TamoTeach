@@ -1,27 +1,36 @@
 import React, { useState, useEffect } from "react";
 import "./Battle.css";
+import i1 from "./images/battle.GIF";
+import i2 from "./images/Dead.GIF";
+import victory from "./images/Victory.PNG";
 
 function Battle() {
   const [points, setPoints] = useState(() => {
-    const savedPoints = localStorage.getItem('points');
+    const savedPoints = localStorage.getItem("points");
     return savedPoints ? JSON.parse(savedPoints) : 100;
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [imageSrc, setImageSrc] = useState(require('./images/battle.GIF'));
+  const [index, setIndex] = useState(0);
+  const [win, setWin] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
-  const rightAnswer = (image) => {
-    setImageSrc(image);
+  const rightAnswer = () => {
+    setWin(true);
+    setIsModalOpen(false);
+    setIndex(1);
   };
 
+  const images = [i1, i2];
+
   useEffect(() => {
-    localStorage.setItem('points', JSON.stringify(points));
+    localStorage.setItem("points", JSON.stringify(points));
   }, [points]);
 
   const decrease = (num) => {
-    setPoints(prevPoints => Math.max(prevPoints - num, 0));
-  }
+    setPoints((prevPoints) => Math.max(prevPoints - num, 0));
+  };
+
   return (
     <div>
       <header className="header">
@@ -40,22 +49,30 @@ function Battle() {
           <p className="points-text">{points}</p>
         </div>
       </header>
+
       <div className="battle-background-container">
-        <img className="battle-img" src={imageSrc}/>
-        <button className='attack-button' onClick={openModal}></button>
+        <img className="battle-img" src={images[index]} />
+        <button className="attack-button" onClick={openModal}></button>
       </div>
+
+      {win && (
+        <div className="modal">
+          <div className="modal-content">
+            <img className="modal-img" src={require("./images/Victory.PNG")} />
+            <button onClick={closeModal}>Close</button>
+          </div>
+        </div>
+      )}
 
       {isModalOpen && (
         <div className="modal">
           <div className="modal-content">
-            <img
-              className="modal-img"
-              src={require("./images/Question.PNG")}
-            />
+            <img className="modal-img" src={require("./images/Question.PNG")} />
             <button
               className="overlay-button overlay-button-A"
               onClick={() => {
-                closeModal(); rightAnswer(require('./images/battle-opp-hurt.GIF'))
+                closeModal();
+                rightAnswer(require("./images/battle-opp-hurt.GIF"));
               }}
             ></button>
             <button
