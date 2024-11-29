@@ -11,6 +11,7 @@ import w5 from "./images/Definition 2.PNG";
 import w6 from "./images/Definition 3.PNG";
 
 function Chemistry() {
+  const [points, setPoints] = useState(100);
   const whiteboards = [w1, w2, w3, w4, w5, w6];
   const units = ["Unit 1", "Unit 2", "Unit 3"];
   const [currentUnit, setCurrentUnit] = useState(0);
@@ -33,8 +34,20 @@ function Chemistry() {
 
   return (
     <div className="Chem">
-      <header className="ChemHeader">
-        <h1>Chemistry</h1>
+      <header className="header">
+        <button className="back-button" onClick={() => window.history.back()}>
+          <img
+            className="back-button-img"
+            src={require(`./images/left-arrow.PNG`)}
+          />
+        </button>
+        <div className="middle">
+          <h1>Chemistry</h1>
+        </div>
+        <div className="points">
+          <img className="points-img" src={require("./images/points.webp")} />
+          <p className="points-text">{points}</p>
+        </div>
       </header>
       <h3>{units[currentUnit]}</h3>
 

@@ -57,7 +57,7 @@ function Home() {
                 <img
                   src={require(`./${pet.img}`)}
                   alt={pet.name}
-                  style={{ width: "200px", height: "auto" }}
+                  style={{ width: "300px", height: "auto" }}
                 />
               </span>
               <p className="pet-name">{pet.name}</p>
