@@ -19,10 +19,9 @@ h3 {
 
 .whiteboard {
   z-index: 1;
-  top: 5vh;
+  top: 0vh;
   left: 50vw;
   transform: translate(-50%);
-  display: block;
   width: 50vw;
   height: auto;
   position: absolute;

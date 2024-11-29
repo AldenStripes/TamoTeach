@@ -129,8 +129,9 @@ h2 {
   gap: 20px; /* Add some space between buttons */
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   height: 100px;
+  bottom: 0;
 }
 
 button {
@@ -158,12 +159,4 @@ button:hover {
 button:active {
   transform: scale(1.05);
   box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);
-}
-
-footer {
-  z-index: 1;
-  display: flex;
-  width: 100vw;
-  position: absolute;
-  bottom: 10vh;
 }
