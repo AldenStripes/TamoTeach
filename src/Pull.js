@@ -5,9 +5,14 @@ function Pull() {
   const [points, setPoints] = useState(100);
   return (
   <div>
-    <header className="Home-header">
+    <header className="header">
+      <button className='back-button' onClick={() => window.history.back()}>
+        <img className='back-button-img' src={require(`./images/left-arrow.PNG`)}/>
+      </button>
+      <div className="middle"></div>
       <div className="points">
-        <h1>Points: {points}</h1>
+        <img className="points-img" src={require('./images/points.webp')}/>
+        <p className='points-text'>{points}</p>
       </div>
     </header>
     <main className="Pull">

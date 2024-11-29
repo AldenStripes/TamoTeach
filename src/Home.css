@@ -6,17 +6,56 @@ body {
 }
 
 .Home {
-  display: flex;
-  flex-direction: column;
   height: 100vh;
 }
 
-.Home-header {
+/* header */
+.header {
   background-color: #4caf50;
   color: white;
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   padding: 10px 0;
 }
+.back-button {
+  width: 75px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10;
+  margin-left: 20px;
+}
+.back-button-img {
+  width: 3vw;
+  height: auto;
+}
+.points {
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.points-img {
+  height: 40px;
+  width: 40px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+.points-text {
+  margin: 0;
+  display: inline-block;
+  padding: 0;
+
+}
+.middle {
+  width: 75px;
+}
+/*end of header*/
 
 .points h1 {
   margin: 0;

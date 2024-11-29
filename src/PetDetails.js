@@ -8,12 +8,12 @@ function PetDetails() {
   const pets = [
     { id: 1, name: 'Jeff', rarity: 'Common', img: 'images/chippy.gif', description: 'Just a little guy with a love for adventure.' },
     { id: 2, name: 'Jag', rarity: 'Mythic', img: 'images/fraser-jaguar.gif', description: 'Jag claws and slashes his way through all.' },
-    { id: 3, name: 'Pengu', rarity: 'Epic', img: 'images/chipster.gif', description: 'Pengu is a penguin.' },
+    { id: 3, name: 'Pengu', rarity: 'Epic', img: 'images/penguin.gif', description: 'Pengu is a penguin.' },
   ];
 
   // Find the pet that matches the ID from the URL
   const pet = pets.find((pet) => pet.id.toString() === id);
-  
+
 /*
   if (!pet) {
     return <div>Pet not found</div>; 
@@ -48,6 +48,7 @@ function PetDetails() {
           </div>
         </div>
         <button onClick={() => window.history.back()} style={{ marginTop: '20px' }}>Back to Home</button>
+        <button onClick={handleTrainButton}>Train</button>
       </div>
     </div>
   );

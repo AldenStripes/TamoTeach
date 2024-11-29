@@ -5,7 +5,7 @@ function Battle() {
   
   return (
     <div>
-      <header className="Home-header">
+      <header className="header">
         <div className="points">
           <h1>Points: {points}</h1>
         </div>

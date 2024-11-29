@@ -7,15 +7,18 @@ button {
   align-items: center;
   justify-content: center;
 }
+
 .pull-button {
   display: inline-block;
   margin-top: 50px;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   font-weight: bold;
 }
+
 .claw-machine {
   height: 500px;
   width: auto;
   display: inline-block;
   margin-top: 50px;
 }
+
