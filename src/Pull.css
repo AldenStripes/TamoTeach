@@ -1,0 +1,15 @@
+.Pull {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.pull-button {
+  display: inline-block;
+  margin-top: 500px;
+}
+.claw-machine {
+  width: 200px;
+  height: auto;
+  display: inline-block;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './App.css';
+import './Home.css';
 
 function Home() {
   const [points, setPoints] = useState(100);
@@ -8,15 +8,15 @@ function Home() {
 
   const pets = [
     { id: 1, name: 'Jeff', rarity: 'Common', img: 'images/chippy.gif' },
-    { id: 2, name: 'Jaguar dude', rarity: 'Mythic', img: 'images/fraser-jaguar.gif' },
-    { id: 3, name: 'Remy', rarity: 'Common', img: 'images/chipster.gif' },
+    { id: 2, name: 'Jag', rarity: 'Mythic', img: 'images/fraser-jaguar.gif' },
+    { id: 3, name: 'Pengu', rarity: 'Rare', img: 'images/penguin.gif' },
   ];
 
   return (
     <div className="Home">
       <header className="Home-header">
         <div className="points">
-          <h1>Points: {points}</h1>
+          <h1><img src={require=('./images/points.webp')}></img>{points}</h1>
         </div>
       </header>
       <main className="Home-body">

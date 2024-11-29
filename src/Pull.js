@@ -1,7 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './Pull.css';
 
 function Pull() {
-  return <h1>Pull Page - Feature Coming Soon!</h1>;
+  const [points, setPoints] = useState(100);
+  return (
+  <div>
+    <header className="Home-header">
+      <div className="points">
+        <h1>Points: {points}</h1>
+      </div>
+    </header>
+    <main className="Pull">
+      <div>
+        <img src={require(`./images/claw-machine.PNG`)} className="claw-machine"></img>
+      </div>
+      <div>
+        <button className="pull-button">Pull</button>
+      </div>
+    </main>
+  </div>
+  );
 }
 
 export default Pull;
