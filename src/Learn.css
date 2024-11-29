@@ -1,0 +1,54 @@
+h1 {
+  font-size: 2.5vw;
+}
+
+.Learn {
+  text-align: center;
+}
+
+.LearnHeader {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 0;
+}
+
+.whiteboard {
+  left: 50vw;
+  transform: translate(-50%);
+  display: block;
+  width: 50vw;
+  height: auto;
+  position: absolute;
+}
+
+.whiteboard:hover {
+  opacity: 95%;
+}
+
+.right_arrow {
+  top: 50vh;
+  right: 15vw;
+  transform: translate(-50%);
+  display: block;
+  width: 6vw;
+  height: auto;
+  position: absolute;
+}
+
+.right_arrow:hover {
+  opacity: 80%;
+}
+
+.left_arrow {
+  top: 50vh;
+  left: 15vw;
+  transform: translate(50%) scaleX(-1);
+  display: block;
+  width: 6vw;
+  height: auto;
+  position: absolute;
+}
+
+.left_arrow:hover {
+  opacity: 80%;
+}

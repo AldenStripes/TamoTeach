@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #f8f9fa;
   color: #333;
 }
@@ -53,7 +53,6 @@ h2 {
   justify-content: center;
 }
 
-
 .pet-card.common {
   border: 2px solid #cccccc;
 }
@@ -66,14 +65,14 @@ h2 {
   border: 2px solid #9933ff;
 }
 
-
 .pet-img {
   font-size: 2rem;
 }
-.pet-name, .pet-rarity {
+.pet-name,
+.pet-rarity {
   font-size: 1.3rem;
   font-weight: bold;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   margin: 0;
 }
 .pet-rarity {
@@ -94,7 +93,7 @@ h2 {
 
 button {
   background-color: #ffd1dc;
-  color: #4a4a4a; 
+  color: #4a4a4a;
   border: 3px solid #fcb6c3;
   border-radius: 25px;
   padding: 15px 20px;
@@ -104,13 +103,13 @@ button {
   width: 150px;
   text-align: center;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s, box-shadow 0.2s; 
+  transition: transform 0.2s, box-shadow 0.2s;
   transition: background-color 0.1s; /* make cool hover and click effect take time*/
 }
 
 button:hover {
   transform: scale(1.1);
-  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3); 
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 button:active {

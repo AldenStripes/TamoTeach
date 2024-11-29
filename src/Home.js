@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
+import "./App.css";
 
 function Home() {
   const [points, setPoints] = useState(100);
-  const navigate = useNavigate();  // Hook to navigate between pages
+  const navigate = useNavigate(); // Hook to navigate between pages
 
   const pets = [
     { id: 1, name: 'Jeff', rarity: 'Common', img: 'images/chippy.gif' },
@@ -26,14 +27,14 @@ function Home() {
             <div
               key={pet.id}
               className={`pet-card ${pet.rarity.toLowerCase()}`}
-              onClick={() => navigate(`/pet/${pet.id}`)}  // Navigate to pet's detail page
-              style={{ cursor: 'pointer' }}  // Add cursor pointer for better UI
+              onClick={() => navigate(`/pet/${pet.id}`)} // Navigate to pet's detail page
+              style={{ cursor: "pointer" }} // Add cursor pointer for better UI
             >
               <span className="pet-img">
                 <img
                   src={require(`./${pet.img}`)}
                   alt={pet.name}
-                  style={{ width: '100px', height: 'auto' }}
+                  style={{ width: "100px", height: "auto" }}
                 />
               </span>
               <p className="pet-name">{pet.name}</p>
@@ -42,10 +43,10 @@ function Home() {
         </div>
       </main>
       <footer className="button-grid-container">
-        <button onClick={() => navigate('/battle')}>Battle</button>
-        <button onClick={() => navigate('/train')}>Train</button>
-        <button onClick={() => navigate('/pull')}>Pull</button>
-        <button onClick={() => navigate('/settings')}>Settings</button>
+        <button onClick={() => navigate("/battle")}>Battle</button>
+        <button onClick={() => navigate("/pull")}>Pull</button>
+        <button onClick={() => navigate("/learn")}>Review</button>
+        <button onClick={() => navigate("/settings")}>Settings</button>
       </footer>
     </div>
   );
