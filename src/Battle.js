@@ -4,9 +4,14 @@ import "./Battle.css";
 function Battle() {
   const [points, setPoints] = useState(100);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [imageSrc, setImageSrc] = useState(require('./images/battle.GIF'));
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+  const rightAnswer = (image) => {
+    setImageSrc(image); // Change the image based on button clicked
+
+  };
 
   return (
     <div>
@@ -19,7 +24,7 @@ function Battle() {
         </button>
         <div className="middle">
           {" "}
-          <h1>Learn</h1>
+          <h1>Battle</h1>
         </div>
         <div className="points">
           <img className="points-img" src={require("./images/points.webp")} />
@@ -27,9 +32,8 @@ function Battle() {
         </div>
       </header>
       <div className="battle-background-container">
-        <img className="battle-img" src={require('./images/battle.GIF')}/>
+        <img className="battle-img" src={imageSrc}/>
         <button className='attack-button' onClick={openModal}></button>
-        <button className='defense-button' onClick={openModal}></button>
       </div>
 
       {isModalOpen && (
@@ -37,8 +41,29 @@ function Battle() {
           <div className="modal-content">
             <img
               className="modal-img"
-              src={require("./images/pulled-pengu.PNG")}
+              src={require("./images/Question.PNG")}
             />
+            <button
+              className="overlay-button overlay-button-A"
+              onClick={() => {
+                closeModal(); rightAnswer(require('./images/battle-opp-hurt.GIF'))
+              }}
+            >
+            </button>
+            <button
+              className="overlay-button overlay-button-B"
+              onClick={closeModal}
+            ></button>
+            <button
+              className="overlay-button overlay-button-C"
+              onClick={closeModal}
+            >
+            </button>
+            <button
+              className="overlay-button overlay-button-D"
+              onClick={closeModal}
+            >
+            </button>
             <div></div>
             <button onClick={closeModal}>Close</button>
           </div>
