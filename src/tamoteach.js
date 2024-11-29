@@ -21,14 +21,14 @@ function Learn() {
 
       {/* RIGHT ARROW */}
       <img
-        src={require(`./images/left-arrow.PNG`)}
+        src={require(`./images/right-arrow.PNG`)}
         alt="Arrow"
         className="right_arrow"
       ></img>
 
       {/* LEFT ARROW */}
       <img
-        src={require(`./images/left-arrow.PNG`)}
+        src={require(`./images/right-arrow.PNG`)}
         alt="Arrow"
         className="left_arrow"
       ></img>
