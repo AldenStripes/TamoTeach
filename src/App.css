@@ -5,13 +5,13 @@ body {
   color: #333;
 }
 
-.App {
+.Home {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
 
-.App-header {
+.Home-header {
   background-color: #4caf50;
   color: white;
   text-align: center;
@@ -27,7 +27,7 @@ h2 {
   font-size: 3rem;
 }
 
-.App-body {
+.Home-body {
   flex: 1;
   text-align: center;
   padding: 20px;
@@ -99,22 +99,20 @@ button {
   border-radius: 25px;
   padding: 15px 20px;
   font-size: 1.2rem;
-  font-family: 'Comic Sans MS', cursive, sans-serif; 
+  /* */
   cursor: pointer;
   width: 150px;
   text-align: center;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s, box-shadow 0.2s; 
-  transition: background-color 0.1s;
+  transition: background-color 0.1s; /* make cool hover and click effect take time*/
 }
 
-/* Hover effect */
 button:hover {
   transform: scale(1.1);
   box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3); 
 }
 
-/* Active state */
 button:active {
   transform: scale(1.05);
   box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);
