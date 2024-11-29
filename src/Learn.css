@@ -1,5 +1,15 @@
 h1 {
-  font-size: 2.5vw;
+  font-size: 2vw;
+}
+
+h2 {
+  font-weight: 200;
+  font-size: 1.25vw;
+}
+
+h3 {
+  font-size: 2vw;
+  font-weight: 500;
 }
 
 .Learn {
@@ -7,12 +17,14 @@ h1 {
 }
 
 .LearnHeader {
-  background-color: #4caf50;
-  color: white;
+  background-color: #ffe4e1;
+  color: black;
   padding: 10px 0;
 }
 
 .whiteboard {
+  z-index: 1;
+  top: 15vh;
   left: 50vw;
   transform: translate(-50%);
   display: block;
@@ -26,7 +38,7 @@ h1 {
 }
 
 .right_arrow {
-  top: 50vh;
+  top: 45vh;
   right: 15vw;
   transform: translate(-50%);
   display: block;
@@ -40,7 +52,7 @@ h1 {
 }
 
 .left_arrow {
-  top: 50vh;
+  top: 45vh;
   left: 15vw;
   transform: translate(50%) scaleX(-1);
   display: block;
@@ -51,4 +63,20 @@ h1 {
 
 .left_arrow:hover {
   opacity: 80%;
+}
+
+.Toppy {
+  z-index: 15;
+  display: block;
+  width: 20vw;
+  bottom: 0vh;
+  position: absolute;
+}
+
+footer {
+  z-index: 1;
+  display: block;
+  width: 100vw;
+  position: absolute;
+  bottom: -0vh;
 }
