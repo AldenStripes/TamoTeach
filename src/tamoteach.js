@@ -25,7 +25,7 @@ function Learn() {
           <p className="points-text">{points}</p>
         </div>
       </header>
-      <h2>Today I want to learn...</h2>
+      <h2 style={{ color: "#ffffff" }}>Today I want to learn...</h2>
 
       <img
         src={require(`./images/Chemistry.PNG`)}

@@ -1,5 +1,5 @@
 button {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 .Pull {
   display: flex;
@@ -11,17 +11,16 @@ button {
 .pull-button {
   display: inline-block;
   margin-top: 50px;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   font-weight: bold;
 }
 
 .claw-machine {
-  height: 500px;
+  height: 600px;
   width: auto;
   display: inline-block;
-  margin-top: 50px;
+  margin-top: 150px;
 }
-
 
 .open-modal-button {
   padding: 10px 20px;

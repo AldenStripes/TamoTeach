@@ -5,12 +5,12 @@ import './Pull.css';
 function Pull() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [points, setPoints] = useState(() => {
-    const savedPoints = localStorage.getItem('points');
+    const savedPoints = localStorage.getItem("points");
     return savedPoints ? JSON.parse(savedPoints) : 100; // default is 100
   });
 
   useEffect(() => {
-    const savedPoints = localStorage.getItem('points');
+    const savedPoints = localStorage.getItem("points");
     if (savedPoints !== null) {
       setPoints(JSON.parse(savedPoints));
     }
@@ -19,11 +19,11 @@ function Pull() {
   const closeModal = () => setIsModalOpen(false);
 
   useEffect(() => {
-    localStorage.setItem('points', JSON.stringify(points));
+    localStorage.setItem("points", JSON.stringify(points));
   }, [points]);
   const decreasePoints = (num) => {
-    setPoints(prevPoints => Math.max(prevPoints - num, 0));
-  }
+    setPoints((prevPoints) => Math.max(prevPoints - num, 0));
+  };
 
 
   const navigate = useNavigate(); 
@@ -55,22 +55,23 @@ function Pull() {
         <button className="pull-button" onClick={() => {
           openModal();
           decreasePoints(20);
-          addPet({ id: 3, name: "Pengu", rarity: "Rare", img: "images/penguin.gif" })
-
         }}>Pull</button>
       </div>
 
-      {isModalOpen && (
-        <div className="modal">
-          <div className="modal-content">
-            <img className="modal-img" src={require('./images/pulled-pengu.PNG')}/>
-            <div></div>
-            <button onClick={closeModal}>Close</button>
+        {isModalOpen && (
+          <div className="modal">
+            <div className="modal-content">
+              <img
+                className="modal-img"
+                src={require("./images/pulled-pengu.PNG")}
+              />
+              <div></div>
+              <button onClick={closeModal}>Close</button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
       </main>
-  </div>
+    </div>
   );
 }
 
