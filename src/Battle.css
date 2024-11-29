@@ -115,16 +115,16 @@ defense-button:hover {
   opacity: 0;
 }
 .overlay-button-A {
-  top: 315px;
+  top: 450px;
 }
 .overlay-button-B {
-  top: 363px;
+  top: 500px;
 }
 .overlay-button-C {
-  top: 410px;
+  top: 550px;
 }
 .overlay-button-D {
-  top: 455px;
+  top: 600px;
 }
 
 .overlay-button:hover {

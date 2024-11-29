@@ -20,7 +20,7 @@ function Battle() {
     setIsModalOpen(false);
     setIndex(1);
   };
-
+  const closeVictory = () => setWin(false);
   const images = [i1, i2];
 
   useEffect(() => {
@@ -59,7 +59,7 @@ function Battle() {
         <div className="modal">
           <div className="modal-content">
             <img className="modal-img" src={require("./images/Victory.PNG")} />
-            <button onClick={closeModal}>Close</button>
+            <button onClick={closeVictory}>Close</button>
           </div>
         </div>
       )}
