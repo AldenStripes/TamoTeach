@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import "./Chem.css";
 import w1 from "./images/Unit 1.PNG";
@@ -54,7 +53,7 @@ function Chemistry() {
       ></img>
 
       <img
-        src={require(`./images/Arrow.PNG`)}
+        src={require(`./images/right-arrow.PNG`)}
         alt="Arrow"
         className="right_arrow2"
         id="right arrow2"
@@ -63,14 +62,14 @@ function Chemistry() {
 
       {/* LEFT ARROW */}
       <img
-        src={require(`./images/right-arrow.PNG`)}
+        src={require(`./images/left-arrow.PNG`)}
         alt="Arrow"
         className="left_arrow1"
         id="left arrow"
       ></img>
 
       <img
-        src={require(`./images/Arrow.PNG`)}
+        src={require(`./images/left-arrow.PNG`)}
         alt="Arrow"
         className="left_arrow2"
         id="left arrow2"

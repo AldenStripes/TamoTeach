@@ -25,7 +25,7 @@ h3 {
 
 .whiteboard {
   z-index: 1;
-  top: 20vh;
+  top: 22vh;
   left: 50vw;
   transform: translate(-50%);
   display: block;
@@ -64,20 +64,20 @@ h3 {
 .right_arrow2 {
   transform: translateX(-50%);
   right: 39vw;
-  top: 17.5vh;
+  top: 18vh;
   width: 4vw;
 }
 
 .left_arrow1 {
-  transform: scaleX(-1) translate(-50%);
+  transform: translate(50%);
   left: 15vw;
   top: 50vh;
 }
 
 .left_arrow2 {
-  transform: scaleX(-1) translate(-50%);
+  transform: translate(50%);
   left: 39vw;
-  top: 17.5vh;
+  top: 18vh;
   width: 4vw;
 }
 
