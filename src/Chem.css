@@ -37,3 +37,54 @@ h3 {
 .whiteboard:hover {
   opacity: 95%;
 }
+
+.right_arrow1,
+.right_arrow2,
+.left_arrow1,
+.left_arrow2 {
+  display: block;
+  width: 6vw;
+  height: auto;
+  position: absolute;
+}
+
+.right_arrow:hover,
+.right_arrow2:hover,
+.left_arrow1:hover,
+.left_arrow2:hover {
+  opacity: 80%;
+}
+
+.right_arrow1 {
+  transform: translateX(-50%);
+  right: 15vw;
+  top: 50vh;
+}
+
+.right_arrow2 {
+  transform: translateX(-50%);
+  right: 39vw;
+  top: 17.5vh;
+  width: 4vw;
+}
+
+.left_arrow1 {
+  transform: scaleX(-1) translate(-50%);
+  left: 15vw;
+  top: 50vh;
+}
+
+.left_arrow2 {
+  transform: scaleX(-1) translate(-50%);
+  left: 39vw;
+  top: 17.5vh;
+  width: 4vw;
+}
+
+.Toppy {
+  z-index: 15;
+  display: block;
+  width: 20vw;
+  bottom: 0vh;
+  position: absolute;
+}
