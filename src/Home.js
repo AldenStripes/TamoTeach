@@ -14,20 +14,16 @@ function Home() {
 
   return (
     <div className="Home">
-      <header className="header">
-        <button className="back-button" onClick={() => window.history.back()}>
-          <img
-            className="back-button-img"
-            src={require(`./images/left-arrow.PNG`)}
-          />
+      <header classname="header">
+        <button classname='back-button' onclick={() => window.history.back()}>
+          <img classname='back-button-img' src={require(`./images/left-arrow.PNG`)}/>
         </button>
-        <div className="middle">
-          {" "}
-          <h1>Home</h1>
+        <div classname="middle">
+
         </div>
-        <div className="points">
-          <img className="points-img" src={require("./images/points.webp")} />
-          <p className="points-text">{points}</p>
+        <div classname="points">
+          <img classname="points-img" src={require('./images/points.webp')}/>
+          <p classname='points-text'>{points}</p>
         </div>
       </header>
       <main className="Home-body">
