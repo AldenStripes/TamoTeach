@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
-import "./App.css";
 
 function Home() {
   const [points, setPoints] = useState(100);
