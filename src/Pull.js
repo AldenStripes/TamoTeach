@@ -12,7 +12,7 @@ function Pull() {
     </header>
     <main className="Pull">
       <div>
-        <img src={require(`./images/claw-machine.PNG`)} className="claw-machine"></img>
+        <img src={require(`./images/claw-machine.png`)} className="claw-machine"></img>
       </div>
       <div>
         <button className="pull-button">Pull</button>
