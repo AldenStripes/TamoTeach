@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -39,12 +39,6 @@
 
 .pet-stats button:hover {
   background-color: #218838;
-}
-
-.pet-img img {
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 100%;
 }
 
 .pet-details button {

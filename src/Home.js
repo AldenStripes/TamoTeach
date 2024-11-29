@@ -37,16 +37,14 @@ function Home() {
           />
         </button>
         <div className="middle">
-          {" "}
           <h1>Home</h1>
         </div>
         <div className="points">
           <img className="points-img" src={require("./images/points.webp")} />
           <p className="points-text">{points}</p>
         </div>
-      </header>{" "}
+      </header>
       <main className="Home-body">
-        <h2>Pet Home Page Thingy</h2>
         <div className="pets-container">
           {pets.map((pet) => (
             <div
@@ -59,7 +57,7 @@ function Home() {
                 <img
                   src={require(`./${pet.img}`)}
                   alt={pet.name}
-                  style={{ width: "100px", height: "auto" }}
+                  style={{ width: "200px", height: "auto" }}
                 />
               </span>
               <p className="pet-name">{pet.name}</p>

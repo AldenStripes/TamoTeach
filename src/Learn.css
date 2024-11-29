@@ -17,9 +17,9 @@ h3 {
   text-align: center;
 }
 
-.whiteboard {
+.whiteBoard {
   z-index: 1;
-  top: 0vh;
+  top: 15vh;
   left: 50vw;
   transform: translate(-50%);
   width: 50vw;
