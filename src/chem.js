@@ -1,10 +1,8 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import "./Learn.css";
 
-function Learn() {
-  const navigate = useNavigate(); // Hook to navigate between pages
+function chem() {
   return (
     <div className="Learn">
       <header className="LearnHeader">
@@ -40,14 +38,8 @@ function Learn() {
       >
         Back to Home
       </button>
-      <footer className="button-grid-container">
-        <button onClick={() => navigate("/battle")}>Battle</button>
-        <button onClick={() => navigate("/pull")}>Pull</button>
-        <button onClick={() => navigate("/learn")}>Review</button>
-        <button onClick={() => navigate("/settings")}>Settings</button>
-      </footer>
     </div>
   );
 }
 
-export default Learn;
+export default chem;
