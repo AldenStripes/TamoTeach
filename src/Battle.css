@@ -10,23 +10,40 @@
   object-fit: cover;
 }
 
-.cake-button {
+.attack-button {
   position: absolute; /* this is relative to the container btw*/
-  top: 30.7%;
-  left: 36.3%;
-  width: 156px;
-  height: 230px;
+  top: 60.8%;
+  left: 30.5%;
+  width: 329px;
+  height: 131px;
   z-index: 2;
   border: none;
   background: none;
   outline: none;
   cursor: pointer;
   color: none;
+  box-shadow: none;
+}
+.defense-button {
+  position: absolute; /* relative to the container*/
+  top: 60.8%;
+  left: 50%;
+  width: 327px;
+  height: 131px;
+  z-index: 2;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  color: none;
+  box-shadow: none;
+
 }
 
-.cake-button:hover {
+.attack-button:hover, defense-button:hover {
   cursor: pointer;
   background: none;
+  transform: scale(1);
 }
 
 
@@ -80,6 +97,38 @@
 }
 
 .modal-img {
-  width: 600px;
+  width: 10px;
   height: auto;
+}
+
+.overlay-button {
+  position: absolute;
+  width: 210px;
+  height: 30px;
+  left: 580px;
+  z-index: 2;
+  background: none;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  color: none;
+  opacity: 0;
+}
+.overlay-button-A {
+  top: 315px;
+  
+}
+.overlay-button-B {
+  top: 363px;
+}
+.overlay-button-C {
+  top: 410px;
+}
+.overlay-button-D {
+  top: 455px;
+}
+
+.overlay-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
