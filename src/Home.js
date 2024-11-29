@@ -14,18 +14,22 @@ function Home() {
 
   return (
     <div className="Home">
-      <header classname="header">
-        <button classname='back-button' onclick={() => window.history.back()}>
-          <img classname='back-button-img' src={require(`./images/left-arrow.PNG`)}/>
+      <header className="header">
+        <button className="back-button" onClick={() => window.history.back()}>
+          <img
+            className="back-button-img"
+            src={require(`./images/left-arrow.PNG`)}
+          />
         </button>
-        <div classname="middle">
-
+        <div className="middle">
+          {" "}
+          <h1>Home</h1>
         </div>
-        <div classname="points">
-          <img classname="points-img" src={require('./images/points.webp')}/>
-          <p classname='points-text'>{points}</p>
+        <div className="points">
+          <img className="points-img" src={require("./images/points.webp")} />
+          <p className="points-text">{points}</p>
         </div>
-      </header>
+      </header>{" "}
       <main className="Home-body">
         <h2>Pet Home Page Thingy</h2>
         <div className="pets-container">
@@ -48,7 +52,6 @@ function Home() {
           ))}
         </div>
       </main>
-
       <footer className="button-grid-container">
         <button onClick={() => navigate("/battle")}>Battle</button>
         <button onClick={() => navigate("/pull")}>Pull</button>

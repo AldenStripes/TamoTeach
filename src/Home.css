@@ -165,5 +165,5 @@ footer {
   display: flex;
   width: 100vw;
   position: absolute;
-  bottom: 0vh;
+  bottom: 10vh;
 }
