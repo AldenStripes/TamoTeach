@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import './Battle.css'
+import './Shop.css'
 
-function Battle() {
+function Shop() {
   const [points, setPoints] = useState(100);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
-  
+
   return (
     <div>
       <header className="header">
@@ -20,12 +20,11 @@ function Battle() {
           <p className='points-text'>{points}</p>
         </div>
       </header>
-      <div className="battle-background-container">
-        <img className="battle-img" src={require('./images/battle.PNG')}/>
-        <button className='attack-button' onClick={openModal}></button>
-        <button className='defense-button' onClick={openModal}></button>
+      <div className="background-container">
+        <img className="shop-img" src={require('./images/Shop.PNG')}/>
+        <button className='cake-button' onClick={openModal}></button>
       </div>
-      
+
       {isModalOpen && (
         <div className="modal">
           <div className="modal-content">
@@ -37,7 +36,6 @@ function Battle() {
       )}
     </div>
   );
-
 }
 
-export default Battle;
+export default Shop;

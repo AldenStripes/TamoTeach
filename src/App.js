@@ -6,7 +6,7 @@ import PetDetails from "./PetDetails";
 import Battle from "./Battle";
 import Train from "./Train";
 import Pull from "./Pull";
-import Settings from "./Settings";
+import Shop from "./Shop";
 import Learn from "./tamoteach";
 import Chemistry from "./chem";
 
@@ -19,7 +19,7 @@ function App() {
         <Route path="/battle" element={<Battle />} />
         <Route path="/train" element={<Train />} />
         <Route path="/pull" element={<Pull />} />
-        <Route path="/settings" element={<Settings />} />
+        <Route path="/shop" element={<Shop />} />
         <Route path="/learn" element={<Learn />} />
         <Route path="/chem" element={<Chemistry />} />
       </Routes>
