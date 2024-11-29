@@ -10,7 +10,7 @@ function Learn() {
       <header className="LearnHeader">
         <h1>Learn</h1>
       </header>
-      <h1>Today I want to learn...</h1>
+      <h2>Today I want to learn...</h2>
 
       <img
         src={require(`./images/Chemistry.PNG`)}
@@ -32,13 +32,6 @@ function Learn() {
         alt="Arrow"
         className="left_arrow"
       ></img>
-
-      <button
-        onClick={() => window.history.back()}
-        style={{ marginTop: "20px" }}
-      >
-        Back to Home
-      </button>
 
       <img
         src={require(`./images/Tophat .GIF`)}

@@ -1,14 +1,14 @@
 import React from "react";
 import "./Home.css";
-import "./Learn.css";
+import "./Chem.css";
 
 function Chemistry() {
   return (
-    <div className="Learn">
-      <header className="LearnHeader">
+    <div className="Chem">
+      <header className="ChemHeader">
         <h1>Chemistry</h1>
       </header>
-      <h1>Unit 1</h1>
+      <h3>Unit 1</h3>
 
       <img
         src={require(`./images/Chemistry.PNG`)}
@@ -31,13 +31,6 @@ function Chemistry() {
         className="left_arrow"
         id="left arrow"
       ></img>
-
-      <button
-        onClick={() => window.history.back()}
-        style={{ marginTop: "20px" }}
-      >
-        Back to Home
-      </button>
     </div>
   );
 }

@@ -2,6 +2,16 @@ h1 {
   font-size: 2vw;
 }
 
+h2 {
+  font-weight: 200;
+  font-size: 1.25vw;
+}
+
+h3 {
+  font-size: 2vw;
+  font-weight: 500;
+}
+
 .Learn {
   text-align: center;
 }
@@ -14,7 +24,7 @@ h1 {
 
 .whiteboard {
   z-index: 1;
-  top: 20vh;
+  top: 15vh;
   left: 50vw;
   transform: translate(-50%);
   display: block;
@@ -28,7 +38,7 @@ h1 {
 }
 
 .right_arrow {
-  top: 50vh;
+  top: 45vh;
   right: 15vw;
   transform: translate(-50%);
   display: block;
@@ -42,7 +52,7 @@ h1 {
 }
 
 .left_arrow {
-  top: 50vh;
+  top: 45vh;
   left: 15vw;
   transform: translate(50%) scaleX(-1);
   display: block;
