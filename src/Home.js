@@ -16,7 +16,7 @@ function Home() {
     <div className="Home">
       <header className="Home-header">
         <div className="points">
-          <h1><img src={require=('./images/points.webp')}></img>{points}</h1>
+          <h1><img src={require=('./images/points.webp')}/>{points}</h1>
         </div>
       </header>
       <main className="Home-body">
