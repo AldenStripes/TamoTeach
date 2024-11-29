@@ -12,7 +12,7 @@ function Battle() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
   const rightAnswer = (image) => {
-    setImageSrc(image); // Change the image based on button clicked
+    setImageSrc(image);
   };
 
   useEffect(() => {
@@ -57,8 +57,7 @@ function Battle() {
               onClick={() => {
                 closeModal(); rightAnswer(require('./images/battle-opp-hurt.GIF'))
               }}
-            >
-            </button>
+            ></button>
             <button
               className="overlay-button overlay-button-B"
               onClick={closeModal}
@@ -66,13 +65,11 @@ function Battle() {
             <button
               className="overlay-button overlay-button-C"
               onClick={closeModal}
-            >
-            </button>
+            ></button>
             <button
               className="overlay-button overlay-button-D"
               onClick={closeModal}
-            >
-            </button>
+            ></button>
             <div></div>
             <button onClick={closeModal}>Close</button>
           </div>

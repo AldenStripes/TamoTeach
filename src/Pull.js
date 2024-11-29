@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useHistory } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Pull.css';
 
 function Pull() {
@@ -24,6 +25,16 @@ function Pull() {
     setPoints(prevPoints => Math.max(prevPoints - num, 0));
   }
 
+
+  const navigate = useNavigate(); 
+  const addPet = (pet) => {
+    const savedPets = JSON.parse(localStorage.getItem('selectedPets')) || [];
+    if (!savedPets.some((p) => p.id === pet.id)) {
+      savedPets.push(pet);
+      localStorage.setItem('selectedPets', JSON.stringify(savedPets));
+    }
+  };
+
   return (
   <div>
     <header className="header">
@@ -44,6 +55,8 @@ function Pull() {
         <button className="pull-button" onClick={() => {
           openModal();
           decreasePoints(20);
+          addPet({ id: 3, name: "Pengu", rarity: "Rare", img: "images/penguin.gif" })
+
         }}>Pull</button>
       </div>
 

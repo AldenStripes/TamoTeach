@@ -8,24 +8,45 @@ function Home() {
     return savedPoints ? JSON.parse(savedPoints) : 100; // default is 100
   });
 
-  useEffect(() => {
+  
+  useEffect(() => { // saved points
     const savedPoints = localStorage.getItem('points');
     if (savedPoints !== null) {
       setPoints(JSON.parse(savedPoints));
     }
   }, []);
 
-  useEffect(() => {
+  useEffect(() => { // points
     localStorage.setItem('points', JSON.stringify(points));
   }, [points]);
 
   const navigate = useNavigate(); 
 
-  const pets = [
-    { id: 1, name: "Jeff", rarity: "Common", img: "images/chippy.gif" },
-    { id: 2, name: "Jag", rarity: "Mythic", img: "images/fraser-jaguar.gif" },
-    { id: 3, name: "Pengu", rarity: "Rare", img: "images/penguin.gif" },
-  ];
+  const loadPetsFromLocalStorage = () => {
+    const storedPets = JSON.parse(localStorage.getItem("selectedPets")) || [];
+    const defaultPets = [
+      { id: 1, name: "Jeff", rarity: "Common", img: "images/chippy.gif" },
+      { id: 2, name: "Jag", rarity: "Mythic", img: "images/fraser-jaguar.gif" },
+    ];
+
+    // Merge default pets with stored pets, avoiding duplicates
+    const mergedPets = [...defaultPets, ...storedPets].reduce((acc, pet) => {
+      if (!acc.find((p) => p.id === pet.id)) {
+        acc.push(pet);
+      }
+      return acc;
+    }, []);
+
+    return mergedPets;
+  };
+
+const [selectedPets, setSelectedPets] = useState(loadPetsFromLocalStorage);
+
+useEffect(() => {
+  // Save updated `selectedPets` to localStorage whenever it changes
+  localStorage.setItem("selectedPets", JSON.stringify(selectedPets));
+}, [selectedPets]);
+
 
   return (
     <div className="Home">
@@ -46,7 +67,7 @@ function Home() {
       </header>
       <main className="Home-body">
         <div className="pets-container">
-          {pets.map((pet) => (
+          {JSON.parse(localStorage.getItem("selectedPets") || "[]").map((pet) => (
             <div
               key={pet.id}
               className={`pet-card ${pet.rarity.toLowerCase()}`}
