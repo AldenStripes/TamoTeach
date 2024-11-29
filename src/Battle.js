@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Battle.css";
 
 function Battle() {
-  const [points, setPoints] = useState(100);
+  const [points, setPoints] = useState(() => {
+    const savedPoints = localStorage.getItem('points');
+    return savedPoints ? JSON.parse(savedPoints) : 100;
+  });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [imageSrc, setImageSrc] = useState(require('./images/battle.GIF'));
 
@@ -10,9 +13,15 @@ function Battle() {
   const closeModal = () => setIsModalOpen(false);
   const rightAnswer = (image) => {
     setImageSrc(image); // Change the image based on button clicked
-
   };
 
+  useEffect(() => {
+    localStorage.setItem('points', JSON.stringify(points));
+  }, [points]);
+
+  const decrease = (num) => {
+    setPoints(prevPoints => Math.max(prevPoints - num, 0));
+  }
   return (
     <div>
       <header className="header">

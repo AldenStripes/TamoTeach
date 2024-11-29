@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./Home.css";
 import Home from "./Home";
@@ -11,6 +11,7 @@ import Learn from "./tamoteach";
 import Chemistry from "./chem";
 
 function App() {
+  const [points, setPoints] = useState(100);
   return (
     <Router>
       <Routes>

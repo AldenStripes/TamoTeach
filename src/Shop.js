@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Shop.css";
 
 function Shop() {
-  const [points, setPoints] = useState(100);
+  const [points, setPoints] = useState(() => {
+    const savedPoints = localStorage.getItem('points');
+    return savedPoints ? JSON.parse(savedPoints) : 100;
+  });
   const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  useEffect(() => {
+    localStorage.setItem('points', JSON.stringify(points));
+  }, [points]);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+  const decreasePoints = (num) => {
+    setPoints(prevPoints => Math.max(prevPoints - num, 0));
+  }
+
 
   return (
     <div>
@@ -28,7 +39,10 @@ function Shop() {
       </header>
       <div className="background-container">
         <img className="shop-img" src={require("./images/Shop.PNG")} />
-        <button className="cake-button" onClick={openModal}></button>
+        <button className="cake-button" onClick={() => {
+          openModal();
+          decreasePoints(15);
+        }}></button>
       </div>
 
       {isModalOpen && (

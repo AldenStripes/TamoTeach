@@ -1,12 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Pull.css';
 
 function Pull() {
-  const [points, setPoints] = useState(100);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [points, setPoints] = useState(() => {
+    const savedPoints = localStorage.getItem('points');
+    return savedPoints ? JSON.parse(savedPoints) : 100; // default is 100
+  });
 
+  useEffect(() => {
+    const savedPoints = localStorage.getItem('points');
+    if (savedPoints !== null) {
+      setPoints(JSON.parse(savedPoints));
+    }
+  }, []);
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  useEffect(() => {
+    localStorage.setItem('points', JSON.stringify(points));
+  }, [points]);
+  const decreasePoints = (num) => {
+    setPoints(prevPoints => Math.max(prevPoints - num, 0));
+  }
 
   return (
   <div>
@@ -25,7 +41,10 @@ function Pull() {
         <img src={require(`./images/claw-machine.PNG`)} className="claw-machine"></img>
       </div>
       <div>
-        <button className="pull-button" onClick={openModal}>Pull</button>
+        <button className="pull-button" onClick={() => {
+          openModal();
+          decreasePoints(20);
+        }}>Pull</button>
       </div>
 
       {isModalOpen && (

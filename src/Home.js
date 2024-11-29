@@ -1,10 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
 function Home() {
-  const [points, setPoints] = useState(100);
-  const navigate = useNavigate(); // Hook to navigate between pages
+  const [points, setPoints] = useState(() => {
+    const savedPoints = localStorage.getItem('points');
+    return savedPoints ? JSON.parse(savedPoints) : 100; // default is 100
+  });
+
+  useEffect(() => {
+    const savedPoints = localStorage.getItem('points');
+    if (savedPoints !== null) {
+      setPoints(JSON.parse(savedPoints));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('points', JSON.stringify(points));
+  }, [points]);
+
+  const navigate = useNavigate(); 
 
   const pets = [
     { id: 1, name: "Jeff", rarity: "Common", img: "images/chippy.gif" },
