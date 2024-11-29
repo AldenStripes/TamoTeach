@@ -10,23 +10,39 @@
   object-fit: cover;
 }
 
-.cake-button {
+.attack-button {
   position: absolute; /* this is relative to the container btw*/
-  top: 30.7%;
-  left: 36.3%;
-  width: 156px;
-  height: 230px;
+  top: 70.5%;
+  left: 30.5%;
+  width: 327px;
+  height: 131px;
   z-index: 2;
   border: none;
   background: none;
   outline: none;
   cursor: pointer;
   color: none;
+  box-shadow: none;
+}
+.defense-button {
+  position: absolute; /* relative to the container*/
+  top: 70.5%;
+  left: 60%;
+  width: 327px;
+  height: 131px;
+  z-index: 2;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  color: none;
+  box-shadow: none;
 }
 
-.cake-button:hover {
+.attack-button:hover, defense-button:hover {
   cursor: pointer;
   background: none;
+  transform: scale(1);
 }
 
 
