@@ -1,6 +1,6 @@
 # FraserHacks - TamoTeach
 ## Inspiration
-As IB students from St. Francis Xavier, we know how repetitive and boring studying for Ib exams are. They can be up to 100% of our final mark, but finding resources for exams can be incredibly difficult. We wanted to make studying fun and interactive for IB students while combining it with a creative pet game concept.
+As IB students from St. Francis Xavier, we know how repetitive and boring studying for IB exams are. They can be up to 100% of our final mark, but finding resources for exams can be incredibly difficult. We wanted to make studying fun and interactive for IB students while combining it with a creative pet game concept.
 
 ## What it does
 
