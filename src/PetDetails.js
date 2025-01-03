@@ -27,7 +27,8 @@ function PetDetails() {
       name: "Jag",
       rarity: "Mythic",
       img: "images/fraser-jaguar.gif",
-      description: "Jag claws and slashes his way through all.",
+      description:
+        "Jag claws and slashes his way through all. STATS:HP: 30 ATK: 35 DEF: 20",
     },
     {
       id: 3,
