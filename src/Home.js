@@ -9,7 +9,6 @@ function Home() {
   });
 
   useEffect(() => {
-    // saved points
     const savedPoints = localStorage.getItem("points");
     if (savedPoints !== null) {
       setPoints(JSON.parse(savedPoints));
@@ -17,7 +16,6 @@ function Home() {
   }, []);
 
   useEffect(() => {
-    // points
     localStorage.setItem("points", JSON.stringify(points));
   }, [points]);
 
@@ -31,7 +29,6 @@ function Home() {
       { id: 3, name: "Pengu", rarity: "Common", img: "images/penguin.gif" },
     ];
 
-    // Merge default pets with stored pets, avoiding duplicates
     const mergedPets = [...defaultPets, ...storedPets].reduce((acc, pet) => {
       if (!acc.find((p) => p.id === pet.id)) {
         acc.push(pet);
@@ -45,7 +42,6 @@ function Home() {
   const [selectedPets, setSelectedPets] = useState(loadPetsFromLocalStorage);
 
   useEffect(() => {
-    // Save updated `selectedPets` to localStorage whenever it changes
     localStorage.setItem("selectedPets", JSON.stringify(selectedPets));
   }, [selectedPets]);
 
@@ -56,37 +52,36 @@ function Home() {
           <img
             className="back-button-img"
             src={require(`./images/left-arrow.PNG`)}
+            alt="Back"
           />
         </button>
         <div className="middle">
           <h1>Home</h1>
         </div>
         <div className="points">
-          <img className="points-img" src={require("./images/points.webp")} />
+          <img className="points-img" src={require("./images/points.webp")} alt="Points" />
           <p className="points-text">{points}</p>
         </div>
       </header>
       <main className="Home-body">
         <div className="pets-container">
-          {JSON.parse(localStorage.getItem("selectedPets") || "[]").map(
-            (pet) => (
-              <div
-                key={pet.id}
-                className={`pet-card ${pet.rarity.toLowerCase()}`}
-                onClick={() => navigate(`/pet/${pet.id}`)} // Navigate to pet's detail page
-                style={{ cursor: "pointer" }} // Add cursor pointer for better UI
-              >
-                <span className="pet-img">
-                  <img
-                    src={require(`./${pet.img}`)}
-                    alt={pet.name}
-                    style={{ width: "300px", height: "auto" }}
-                  />
-                </span>
-                <p className="pet-name">{pet.name}</p>
-              </div>
-            )
-          )}
+          {JSON.parse(localStorage.getItem("selectedPets") || "[]").map((pet) => (
+            <div
+              key={pet.id}
+              className={`pet-card ${pet.rarity.toLowerCase()}`}
+              onClick={() => navigate(`/pet/${pet.id}`)} 
+              style={{ cursor: "pointer" }}
+            >
+              <span className="pet-img">
+                <img
+                  src={require(`./${pet.img}`)}
+                  alt={pet.name}
+                  style={{ width: "130px", height: "auto" }}
+                />
+              </span>
+              <p className="pet-name">{pet.name}</p>
+            </div>
+          ))}
         </div>
       </main>
       <footer className="button-grid-container">

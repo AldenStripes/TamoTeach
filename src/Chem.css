@@ -10,27 +10,27 @@
 }
 
 h1 {
-  font-size: 2vw;
+  font-size: 6vw; /* Adjust font size based on viewport */
 }
 
 h2 {
   font-weight: 200;
-  font-size: 1.25vw;
+  font-size: 4vw; /* Adjust font size based on viewport */
 }
 
 h3 {
-  font-size: 2.25vw;
+  font-size: 5vw; /* Adjust font size based on viewport */
   font-weight: bold;
   color: white;
 }
 
 .whiteboard {
   z-index: 1;
-  top: 20vh;
-  left: 50vw;
-  transform: translate(-50%);
+  top: 15vh; /* Adjusted for better mobile alignment */
+  left: 50%;
+  transform: translateX(-50%);
   display: block;
-  width: 50vw;
+  width: 80%; /* Set width to 80% of screen size for mobile */
   height: auto;
   position: absolute;
 }
@@ -44,48 +44,76 @@ h3 {
 .left_arrow1,
 .left_arrow2 {
   display: block;
-  width: 6vw;
+  width: 12vw; /* Adjust arrow width to fit screen better */
   height: auto;
   position: absolute;
 }
 
-.right_arrow:hover,
-.right_arrow2:hover,
-.left_arrow1:hover,
-.left_arrow2:hover {
-  opacity: 80%;
+.right_arrow1,
+.right_arrow2 {
+  top: 50vh; /* Align arrows vertically with the whiteboard */
+}
+
+.left_arrow1,
+.left_arrow2 {
+  top: 50vh; /* Align arrows vertically with the whiteboard */
 }
 
 .right_arrow1 {
-  transform: translateX(-50%);
-  right: 15vw;
-  top: 50vh;
+  right: 10%; /* Adjust position to the right of the whiteboard */
 }
 
 .right_arrow2 {
-  transform: translateX(-50%);
-  right: 39vw;
-  top: 15vh;
-  width: 4vw;
+  right: 15%;
+  top: 20vh;
+  width: 8vw; /* Adjust arrow size for better visibility */
 }
 
 .left_arrow1 {
-  transform: translate(50%);
-  left: 15vw;
-  top: 50vh;
+  left: 10%; /* Adjust position to the left of the whiteboard */
 }
 
 .left_arrow2 {
-  transform: translate(50%);
-  left: 39vw;
-  top: 15vh;
-  width: 4vw;
+  left: 15%;
+  top: 20vh;
+  width: 8vw; /* Adjust arrow size for better visibility */
 }
-
 .Toppy {
   z-index: 15;
   display: block;
-  width: 20vw;
-  bottom: 0vh;
+  width: 50vw; /* Adjust width based on mobile screen size */
+  top: 55vh; /* Adjust top value to position lower on screen */
+  left: 50%; /* Horizontally center the element */
+  transform: translateX(-50%); /* Adjust for perfect centering */
   position: absolute;
+}
+/* Media query for smaller screens (e.g., mobile phones) */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 8vw; /* Increase font size for mobile screens */
+  }
+
+  h2 {
+    font-size: 5vw; /* Adjust font size for mobile screens */
+  }
+
+  h3 {
+    font-size: 6vw; /* Adjust font size for mobile screens */
+  }
+
+  .whiteboard {
+    width: 90%; /* Make the whiteboard width larger on smaller screens */
+    top: 10vh;
+  }
+
+  .right_arrow1,
+  .right_arrow2,
+  .left_arrow1,
+  .left_arrow2 {
+    width: 15vw; /* Make arrows a bit bigger for mobile screens */
+  }
+
+  .Toppy {
+    width: 40vw; /* Increase the size of the "Toppy" section */
+  }
 }

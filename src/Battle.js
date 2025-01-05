@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Battle.css";
-import i1 from "./images/battle.GIF";
+import i1 from "./images/newbattle.GIF";
 import i2 from "./images/Dead.GIF";
 import victory from "./images/Victory.PNG";
 

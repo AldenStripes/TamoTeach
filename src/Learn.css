@@ -1,14 +1,14 @@
 h1 {
-  font-size: 2vw;
+  font-size: 6vw; /* Adjust font size based on viewport */
 }
 
 h2 {
   font-weight: 200;
-  font-size: 1.25vw;
+  font-size: 4vw; /* Adjust font size based on viewport */
 }
 
 h3 {
-  font-size: 2vw;
+  font-size: 5vw; /* Adjust font size based on viewport */
   font-weight: 500;
   padding-bottom: 0;
 }
@@ -20,9 +20,9 @@ h3 {
 .whiteBoard {
   z-index: 1;
   top: 15vh;
-  left: 50vw;
-  transform: translate(-50%);
-  width: 50vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%; /* Set width to 80% for better responsiveness */
   height: auto;
   position: absolute;
 }
@@ -31,30 +31,25 @@ h3 {
   opacity: 95%;
 }
 
-.right_arrow {
-  top: 45vh;
-  right: 15vw;
-  transform: translate(-50%);
+.right_arrow,
+.left_arrow {
+  top: 50vh; /* Align arrows vertically with the whiteboard */
   display: block;
-  width: 6vw;
+  width: 12vw; /* Adjust arrow width to fit better */
   height: auto;
   position: absolute;
 }
 
-.right_arrow:hover {
-  opacity: 80%;
+.right_arrow {
+  right: 10%; /* Position right arrow to the right of the whiteboard */
 }
 
 .left_arrow {
-  top: 45vh;
-  left: 15vw;
-  transform: translate(50%) scaleX(-1);
-  display: block;
-  width: 6vw;
-  height: auto;
-  position: absolute;
+  left: 10%; /* Position left arrow to the left of the whiteboard */
+  transform: translateX(50%) scaleX(-1); /* Flip left arrow */
 }
 
+.right_arrow:hover,
 .left_arrow:hover {
   opacity: 80%;
 }
@@ -62,10 +57,11 @@ h3 {
 .Toppy {
   z-index: 15;
   display: block;
-  width: 20vw;
-  bottom: 0vh;
+  width: 40vw;
+  bottom: 30vh; /* Increased value to move it up further */
   position: absolute;
 }
+
 
 footer {
   z-index: 1;
@@ -73,4 +69,37 @@ footer {
   width: 100vw;
   position: absolute;
   bottom: -10vh;
+}
+
+/* Media query for smaller screens (e.g., mobile phones) */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 8vw; /* Increase font size for mobile screens */
+  }
+
+  h2 {
+    font-size: 5vw; /* Adjust font size for mobile screens */
+  }
+
+  h3 {
+    font-size: 6vw; /* Adjust font size for mobile screens */
+  }
+
+  .whiteBoard {
+    width: 90%; /* Make whiteboard width larger on smaller screens */
+    top: 10vh; /* Adjust whiteboard position */
+  }
+
+  .right_arrow,
+  .left_arrow {
+    width: 15vw; /* Make arrows bigger on mobile screens */
+  }
+
+  .Toppy {
+    width: 60vw; /* Increase size of the "Toppy" section */
+  }
+
+  footer {
+    bottom: 0vh; /* Adjust footer positioning for smaller screens */
+  }
 }

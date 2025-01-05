@@ -3,17 +3,24 @@ body {
   font-family: "Comic Sans MS", cursive, sans-serif;
   background-color: #ffffff;
   color: black;
-  background-image: url("./images/Blank\ BG.PNG");
-  background-size: 100%;
-  background-position: 0% 20%;
+  background-image: url("./images/Untitled\ \(Your\ Story\).jpg");
+  background-size: 100%; /* Resize the image to 50% of its original size */
+  background-position: top left;
+  background-repeat: repeat; /* Repeat the background both horizontally and vertically */
 }
 
 .Home {
   height: 100vh;
-  z-index: 1;
-  background-image: url("./images/BG.PNG");
-  background-size: 100%;
-  background-position: 0% -100%;
+  z-index: 0;
+  background-image: url("./images/newbg.jpg");
+  background-size: 100%; /* Resize the image to 50% of its original size */
+  background-position: top left;
+  background-repeat: repeat; /* Repeat the background both horizontally and vertically */
+}
+
+.middle h1 {
+  font-size: 1.5rem; /* Reduce the font size */
+  margin: 0; /* Optional, removes extra space around the header */
 }
 
 /* header */
@@ -31,6 +38,10 @@ body {
     height: 10vh; /* Full height of the viewport */
     padding: 0; /* Remove extra padding */
     margin: 0; /* Ensure no gaps */
+    
+  
+    
+
   }
 .back-button {
   width: 75px;
@@ -42,7 +53,7 @@ body {
   margin-left: 20px;
 }
 .back-button-img {
-  width: 3vw;
+  width: 5vw;
   height: auto;
 }
 .points {
@@ -92,12 +103,13 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin-top: 375px;
+  margin-top: 225px;
+  
 }
 
 .pet-card {
-  width: 300px;
-  height: 365px;
+  width: 125px;
+  height: 175px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -108,15 +120,15 @@ h2 {
 }
 
 .pet-card.common {
-  border: 5px solid #cccccc;
+  border: 3px solid #b83100;
 }
 
 .pet-card.rare {
-  border: 5px solid #ffcc00;
+  border: 3px solid #ffcc00;
 }
 
 .pet-card.mythic {
-  border: 5px solid #9933ff;
+  border: 3px solid #b83100;
 }
 
 .pet-img {
@@ -132,35 +144,36 @@ h2 {
 .pet-rarity {
   font-size: 1.2rem;
 }
-
 .button-grid-container {
-  background-color: #ffe4e1; /* Light pink background for a retro vibe */
-  color: white;
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-  gap: 20px; /* Add some space between buttons */
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  height: 100px;
-  bottom: 0;
+  background-color: #ffe4e1; /* Light pink background */
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap to new rows */
+  gap: 16px; /* Spacing between buttons */
+  justify-content: center; /* Center buttons horizontally */
+  align-items: center; /* Center items vertically */
+  padding: 20px; /* Padding around the buttons */
+  max-width: 425px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container within the parent */
+  height: auto; /* Fit content height */
 }
+
 
 button {
   background-color: #ffd1dc;
   color: #4a4a4a;
-  border: 3px solid #fcb6c3;
+  border: 2px solid #fcb6c3;
   border-radius: 25px;
-  padding: 15px 20px;
-  font-size: 1.2rem;
-  /* */
+  padding: 0.8rem; /* Adjusted padding */
+  font-size: 0.9rem; /* Adjusted font size */
   cursor: pointer;
-  width: 150px;
   text-align: center;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s, box-shadow 0.2s;
-  transition: background-color 0.1s; /* make cool hover and click effect take time*/
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.1s;
+  width: 120px; /* Fixed button width */
+  max-width: 120px; /* Ensure uniform button size */
 }
+
+
 
 button:hover {
   background-color: #fcb9c8;
@@ -172,3 +185,4 @@ button:active {
   transform: scale(1.05);
   box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);
 }
+

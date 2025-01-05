@@ -12,7 +12,7 @@ function PetDetails() {
     setAte(true);
     setIsModalOpen(false);
   };
-  const [points, setPoints] = useState(100);
+  const [points, setPoints] = useState(80);
   const { id } = useParams();
   const pets = [
     {
@@ -83,7 +83,7 @@ function PetDetails() {
               <img
                 src={require(`./${pet.img}`)}
                 alt={pet.name}
-                style={{ width: "450px", height: "auto" }}
+                style={{ width: "250px", height: "auto" }}
               />
             </div>
           )}
@@ -92,7 +92,7 @@ function PetDetails() {
               <img
                 src={require(`./images/Yummy.GIF`)} // Dynamically require the image
                 alt={pet.name}
-                style={{ width: "500px", height: "auto" }}
+                style={{ width: "300px", height: "auto" }}
               />
             </div>
           )}

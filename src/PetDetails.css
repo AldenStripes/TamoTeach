@@ -1,6 +1,6 @@
 .pet-details {
   text-align: center;
-  padding: 20px;
+  padding: 10px; /* Reduce padding */
 }
 
 .pet-details-container {
@@ -8,10 +8,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 10px;
+  gap: 20px; /* Reduce the gap between sections */
+  max-width: 800px; /* Reduce max-width */
+  margin: 90px auto; /* Increased top and bottom margin */
+  padding: 15px; /* Keep the padding as is */
   border-radius: 10px;
 }
 
@@ -21,18 +21,18 @@
 }
 
 .pet-stats h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 1.5rem; /* Reduce font size */
+  margin-bottom: 10px; /* Reduce margin */
 }
 
 .pet-stats p {
-  font-size: 1.2rem;
-  margin: 5px 0;
+  font-size: 1rem; /* Reduce font size */
+  margin: 4px 0; /* Reduce margin between paragraphs */
 }
 
 .pet-stats button {
-  padding: 10px 20px;
-  margin-top: 20px;
+  padding: 10px 16px; /* Smaller padding */
+  margin-top: 15px; /* Reduce margin */
   background-color: #28a745;
   color: white;
   border: none;
@@ -45,8 +45,8 @@
 }
 
 .pet-details button {
-  padding: 10px 20px;
-  margin-top: 20px;
+  padding: 8px 16px; /* Smaller padding */
+  margin-top: 25px; /* Reduce margin */
   background-color: #007bff;
   color: white;
   border: none;
