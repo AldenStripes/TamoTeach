@@ -4,44 +4,61 @@
   height: auto;
   overflow: hidden;
 }
-
 .battle-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.attack-button,
-.defense-button {
-  position: absolute;
+.attack-button {
+  position: absolute; /* this is relative to the container btw*/
   top: 60.8%;
-  width: 150px; /* Reduced button size */
-  height: 60px; /* Reduced button size */
+  left: 30.5%;
+  width: 329px;
+  height: 131px;
   z-index: 2;
   border: none;
   background: none;
   outline: none;
   cursor: pointer;
+  color: none;
+  box-shadow: none;
 }
-
-.attack-button {
-  left: 30.5%;
-}
-
 .defense-button {
+  position: absolute; /* relative to the container*/
+  top: 60.8%;
   left: 50%;
+  width: 327px;
+  height: 131px;
+  z-index: 2;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  color: none;
+  box-shadow: none;
 }
 
 .attack-button:hover,
-.defense-button:hover {
+defense-button:hover {
   cursor: pointer;
   background: none;
   transform: scale(1);
 }
 
+.open-modal-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .modal {
-  position: fixed; /* Changed to fixed for consistent positioning */
-  top: 0;
+  position: absolute;
+  top: 100px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -54,27 +71,23 @@
 
 .modal-content {
   background: white;
-  padding: 10px; /* Reduced padding for compactness */
-  border-radius: 8px; /* Slightly smaller rounded corners */
+  padding: 20px;
+  border-radius: 10px;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  max-width: 20px; /* Smaller modal width */
-  width: 9%; /* Ensure responsiveness */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .modal-content h2 {
-  font-size: 14px; /* Reduced font size */
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .modal-content p {
-  font-size: 12px; /* Reduced font size */
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .modal-content button {
-  padding: 5px 10px; /* Smaller button */
-  font-size: 12px; /* Smaller font */
+  padding: 15px 20px;
+  font-size: 16px;
   border: none;
   background-color: #f44336;
   color: white;
@@ -83,25 +96,24 @@
 }
 
 .modal-img {
-  width: 200px; /* Set the desired smaller width */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 100%; /* Ensure responsiveness */
+  width: 20px;
+  height: auto;
 }
-
 
 .overlay-button {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 210px;
+  height: 40px;
   left: 580px;
   z-index: 2;
   background: none;
   border: none;
+  background: none;
   outline: none;
   cursor: pointer;
+  color: none;
   opacity: 0;
 }
-
 .overlay-button-A {
   top: 450px;
 }
