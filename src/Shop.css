@@ -1,47 +1,37 @@
+/* General styling for the background container */
 .background-container {
   position: relative;
   width: 100%;
   height: auto;
   overflow: hidden;
 }
+
 .shop-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/* Cake button styling */
 .cake-button {
-  position: absolute; /* this is relative to the container btw*/
+  position: absolute;
   top: 30.7%;
   left: 36.3%;
-  width: 157px;
-  height: 232px;
+  width: 100px; /* Reduced size of the button */
+  height: 150px; /* Reduced size of the button */
   z-index: 2;
   border: none;
   background: none;
   outline: none;
   cursor: pointer;
-  color: none;
-  box-shadow: none;
 }
 
 .cake-button:hover {
-  transform: scale(1);
-  cursor: pointer;
-  background: none;
-}
-
-
-.open-modal-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  transform: scale(1.05); /* Slight hover effect */
   cursor: pointer;
 }
 
+/* Modal container styling */
 .modal {
   position: fixed;
   top: 0;
@@ -55,33 +45,42 @@
   z-index: 1000;
 }
 
+/* Modal content styling */
 .modal-content {
   background: white;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 10px; /* Reduced padding */
+  border-radius: 8px; /* Smaller border radius */
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 220px; /* Small modal width */
+  width: 90%; /* Ensure responsiveness */
 }
 
+/* Modal image styling */
+.modal-img {
+  width: 120px; /* Significantly smaller image size */
+  height: auto;
+  max-width: 100%;
+}
+
+/* Title and paragraph styling */
 .modal-content h2 {
-  margin-bottom: 15px;
+  font-size: 14px; /* Smaller title font size */
+  margin-bottom: 10px;
 }
 
 .modal-content p {
-  margin-bottom: 20px;
+  font-size: 12px; /* Smaller paragraph font size */
+  margin-bottom: 10px;
 }
 
+/* Close button styling */
 .modal-content button {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 6px 12px; /* Smaller button dimensions */
+  font-size: 12px; /* Smaller button text */
   border: none;
   background-color: #f44336;
   color: white;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.modal-img {
-  width: 600px;
-  height: auto;
 }

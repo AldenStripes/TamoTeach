@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
-import "./Battle.css";
 import i1 from "./images/newbattle.GIF";
 import i2 from "./images/Dead.GIF";
-import victory from "./images/Victory.PNG";
 
 function Battle() {
   const [points, setPoints] = useState(() => {
     const savedPoints = localStorage.getItem("points");
     return savedPoints ? JSON.parse(savedPoints) : 100;
   });
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [index, setIndex] = useState(0);
   const [win, setWin] = useState(false);
@@ -20,75 +19,105 @@ function Battle() {
     setIsModalOpen(false);
     setIndex(1);
   };
-  const closeVictory = () => setWin(false);
   const images = [i1, i2];
 
   useEffect(() => {
     localStorage.setItem("points", JSON.stringify(points));
   }, [points]);
 
-  const decrease = (num) => {
-    setPoints((prevPoints) => Math.max(prevPoints - num, 0));
-  };
-
   return (
     <div>
-      <header className="header">
-        <button className="back-button" onClick={() => window.history.back()}>
+      {/* Header Section */}
+      <header style={{ display: "flex", justifyContent: "space-between", padding: "10px", backgroundColor: "#f5f5f5" }}>
+        <button style={{ border: "none", background: "none" }} onClick={() => window.history.back()}>
           <img
-            className="back-button-img"
             src={require(`./images/left-arrow.PNG`)}
+            alt="Back"
+            style={{ width: "24px", height: "24px" }}
           />
         </button>
-        <div className="middle">
-          {" "}
-          <h1>Battle</h1>
-        </div>
-        <div className="points">
-          <img className="points-img" src={require("./images/points.webp")} />
-          <p className="points-text">{points}</p>
+        <h1 style={{ margin: 0 }}>Battle</h1>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <img
+            src={require("./images/points.webp")}
+            alt="Points"
+            style={{ width: "24px", height: "24px", marginRight: "8px" }}
+          />
+          <p style={{ margin: 0 }}>{points}</p>
         </div>
       </header>
 
-      <div className="battle-background-container">
-        <img className="battle-img" src={images[index]} />
-        <button className="attack-button" onClick={openModal}></button>
+      {/* Battle Background */}
+      <div style={{ position: "relative", width: "100%", height: "auto", overflow: "hidden" }}>
+        <img src={images[index]} alt="Battle Scene" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        <button
+          onClick={openModal}
+          style={{
+            position: "absolute",
+            top: "60%",
+            left: "30%",
+            width: "150px",
+            height: "50px",
+            background: "red",
+            border: "none",
+            cursor: "pointer",
+          }}
+        >
+          Attack
+        </button>
       </div>
 
-      {win && (
-        <div className="modal">
-          <div className="modal-content">
-            <img className="modal-img" src={require("./images/Victory.PNG")} />
-            <button onClick={closeVictory}>Close</button>
-          </div>
-        </div>
-      )}
-
+      {/* Question Modal */}
       {isModalOpen && (
-        <div className="modal">
-          <div className="modal-content">
-            <img className="modal-img" src={require("./images/Question.PNG")} />
-            <button
-              className="overlay-button overlay-button-A"
-              onClick={() => {
-                closeModal();
-                rightAnswer(require("./images/battle-opp-hurt.GIF"));
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "10%",
+            height: "10%",
+            background: "rgba(0, 0, 0, 0.5)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 1000,
+          }}
+        >
+          <div
+            style={{
+              background: "white",
+              padding: "10px",
+              borderRadius: "8px",
+              textAlign: "center",
+              maxWidth: "300px", // Adjust modal width
+              width: "90%",
+            }}
+          >
+            <img
+              src={require("./images/Question.PNG")}
+              alt="Question"
+              style={{
+                width: "100px", // Force smaller image size
+                height: "auto", // Maintain aspect ratio
+                maxWidth: "100%", // Prevent overflow
               }}
-            ></button>
-            <button
-              className="overlay-button overlay-button-B"
-              onClick={closeModal}
-            ></button>
-            <button
-              className="overlay-button overlay-button-C"
-              onClick={closeModal}
-            ></button>
-            <button
-              className="overlay-button overlay-button-D"
-              onClick={closeModal}
-            ></button>
-            <div></div>
-            <button onClick={closeModal}>Close</button>
+            />
+            <div style={{ marginTop: "10px" }}>
+              <button
+                onClick={closeModal}
+                style={{
+                  padding: "5px 10px",
+                  fontSize: "12px",
+                  backgroundColor: "#f44336",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "5px",
+                  cursor: "pointer",
+                }}
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       )}
